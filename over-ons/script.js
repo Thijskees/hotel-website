@@ -1,16 +1,20 @@
-var myIndex = 0;
-carousel();
+// Wait for the DOM to load fully
+document.addEventListener("DOMContentLoaded", function () {
+  const slideContainers = document.querySelectorAll(".w3-content");
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+  slideContainers.forEach((container) => {
+    let index = 0;
+    const slides = container.querySelectorAll(".mySlides");
+
+    function showSlides() {
+      slides.forEach((slide) => (slide.style.display = "none"));
+      index++;
+      if (index > slides.length) index = 1;
+      slides[index - 1].style.display = "block";
+
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
-    myIndex++;
-    if (myIndex > x.length) { myIndex = 1 }
-    if (x.length > 0) {
-        x[myIndex - 1].style.display = "block";
-    }
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}
+
+    showSlides(); // start the slideshow for this container
+  });
+});
