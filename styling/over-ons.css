@@ -111,10 +111,7 @@
 
 }
 
-.about-section2 li {
-    color: var(--color-white);
-    margin-bottom: 10px;
-}
+
 
 .about-content-wrapper p {
     font-size: 18px;
@@ -141,30 +138,6 @@
 }
 
 
-
-#menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-#menu li {
-    margin-bottom: 8px;
-    font-size: 16px;
-    color: var(--color-white);
-    line-height: 1.5;
-}
-
-#menu h3 {
-    margin-top: 20px;
-    font-size: 24px;
-    color: var(--color-white);
-}
-
-#dark,#dark2 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-   
-
-}
 #dark2 {
    font-size: 24px;
    
