@@ -15,7 +15,7 @@
 .kamer-label {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--color-grey-light);
+    color: var(--color-grey);
     margin-bottom: 6px;
     margin-top: 18px;
 }
@@ -27,7 +27,7 @@
     border: 1px solid var(--color-border);
     font-size: 1rem;
     background: var(--color-bg);
-    color: var(--color-grey);
+    color: var(--color-grey-dark);
     margin-bottom: 8px;
     transition: border 0.2s;
     box-sizing: border-box;
@@ -88,7 +88,7 @@
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    background: var(--color-accent-dark);
+    background: red;
     color: var(--color-white);
     border: none;
     border-radius: 50%;
@@ -108,7 +108,7 @@
 }
 
 .kamer-afbeelding-verwijder:hover {
-    background: var(--color-accent);
+    background: rgb(118, 0, 0);
 }
 
 .kamer-naam {
@@ -185,4 +185,34 @@
     gap: 20px;
     justify-content: center;
     padding: 10px 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .kamer-container {
+        padding: 20px;
+        margin-top: 80px;
+    }
+
+    .kamer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kamer-afbeelding {
+        width: 100%;
+        height: auto;
+    }
+
+    .kamer-info {
+        padding: 10px;
+    }
+
+    .slideshow-arrow {
+        height: 100px;
+        border-radius: 10px;
+        height: 100px;
+        min-width: 40px;
+    }
 }

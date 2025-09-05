@@ -1,8 +1,21 @@
 <?php
+$env = false;
+
+if (file_exists('../.env')) {
+    $env = parse_ini_file('../.env');
+}
+elseif (file_exists('../../.env')) {
+    $env = parse_ini_file('../../.env');
+}
+
+if ($env === false) {
+    die("No .env file found");
+}
+
+
 $email_send_message = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $admin_email = "alex@alexjonker.dev";
   $client_email = trim($_POST['email'] ?? '');
   $client_name = trim($_POST['naam'] ?? '');
 
@@ -12,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $question .= "<strong>Email:</strong> " . htmlspecialchars($client_email);
   
   require_once($_SERVER['DOCUMENT_ROOT'] . "/assets/php/sender.php");
-  $output = sender($admin_email, $question, "Vraag van " . $client_name);
+  $output = sender($env["admin_email"], $question, "Vraag van " . $client_name);
 
   if (strpos($output, 'Email verstuurd!') !== false) {
     $email_send_message = "Email verstuurd!";
@@ -37,9 +50,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
   <?php include('../assets/html/navbar.html'); ?>
-  <div class="cont">
+  <section class="cont">
     <h1>Neem contact met ons.</h1>
-    <div class="box">
+    <main class="box">
 
       <form action='' method='post'>
         <input type="text" id="naam" name="naam" size="40" required placeholder="Naam" class="style">
@@ -52,15 +65,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </form>
 
       <section>
-        <h2> <i class="fa-solid fa-info my-info"></i>Contact info:</h2> <br>
         <ul>
-          <li><i class="fas fa-location-dot my-icon"></i> Straatnaam 85 1234 AB Alkmaar NL</a></li>
-          <li><i class="fas fa-phone my-icon"></i></a> 072 41 45 343</li>
-          <li> <i class="fas fa-envelope my-icon"></i> info@hotelzon.nl</a></li>
+          <li><i class="fas fa-info my-info my-icon"></i> Contact info:</li>
+          <li><a href="https://www.google.com/maps?q=ict+vanaf+morgen+alkmaar"><i class="fas fa-location-dot my-icon"></i> Straatnaam 85 1234 AB Alkmaar NL</a></li>
+          <li><a href="tel:0724145343"><i class="fas fa-phone my-icon"></i> 072 41 45 343</a></li>
+          <li><a href="mailto:info@hotelzon.nl"><i class="fas fa-envelope my-icon"></i> info@hotelzon.nl</a></li>
         </ul>
       </section>
-    </div>
-  </div>
+    </main>
+  </section>
 
   <?php include('../assets/html/footer.html'); ?>
 

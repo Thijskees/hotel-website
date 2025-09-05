@@ -50,12 +50,12 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST') 
     <section class="login-container">
         <h1 class="login-title">Admin Login</h1>
         <br>
-        <div id="errorMessage" class="error-message" style="display: none;">
+        <article id="errorMessage" class="error-message" style="display: none;">
             Fout wachtwoord. Probeer opnieuw.
-        </div>
+        </article>
         <br>
         <form id="loginForm" method="POST">
-            <div class="form-group">
+            <main class="form-group">
                 <label for="password" class="form-label">Wachtwoord</label>
                 <input
                     type="password"
@@ -64,7 +64,7 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST') 
                     class="form-input"
                     placeholder="Voer uw wachtwoord in"
                     required>
-            </div>
+            </main>
             <button type="submit" class="login-btn">Inloggen</button>
         </form>
         <br>

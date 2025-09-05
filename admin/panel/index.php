@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" name="logout"><i class="fas fa-arrow-left-from-bracket"></i> Uitloggen</button>
         </form>
 
-        <div class="dropdown">
+        <main class="dropdown">
             <a href="#" onclick="toggleDropdown(event)">
                 <i class="fas fa-key"></i> Wachtwoord wijzigen
             </a>
@@ -98,18 +98,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <button type="submit">Wijzig</button>
             </form>
-        </div>
+        </main>
         <p style="color: <?= $error_message[0] ?? '' ?>"><?= $error_message[1] ?? '' ?></p>
     </aside>
     <article>
         <section class="rooms-container">
             <a href="/admin/edit?kamer=<?= count($kamers) + 1 ?>" class="room-card">
-                <div class="room-image" style="position:relative;">
+                <article class="room-image" style="position:relative;">
                     <i class="fa-solid fa-plus"></i>
-                </div>
-                <div class="room-info">
+                </article>
+                <article class="room-info">
                     <h2>Nieuw</h2>
-                </div>
+                </article>
             </a>
             <?php
             foreach ($kamers as $kamer) {
@@ -125,15 +125,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                     ?>
                     <?php if ($kamerAfbeelding): ?>
-                        <div class="room-image" style="position:relative;">
+                        <article class="room-image" style="position:relative;">
                             <img src="<?= $kamerAfbeelding ?>" alt="<?= $kamer['naam'] ?>">
                             <p class="fas fa-pencil-alt" aria-hidden="true"></p>
-                        </div>
+                        </article>
                     <?php endif; ?>
-                    <div class="room-info">
+                    <article class="room-info">
                         <h2><?= $kamer['naam'] ?></h2>
                         <span class="room-price">€<?= $kamer['prijs'] ?> / nacht</span>
-                    </div>
+                    </article>
                 </a>
                 <?php
             }

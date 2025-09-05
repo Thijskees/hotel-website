@@ -16,8 +16,8 @@ a {
   flex-flow: row wrap;
   padding: 30px 30px 20px 30px;
   color: var(--color-grey-lighter);
-  background-color: var(--color-bg);
-  border-top: 1px solid var(--color-border);
+  background-color: var(--navfoot);
+  border-top: 3px solid var(--color-border);
   text-decoration: none;
 }
 

@@ -21,11 +21,12 @@
     --color-shadow-accent: rgba(249, 245, 139, 0.25);
     --color-shadow-accent-light: rgba(249, 245, 139, 0.15);
     --color-footer-bg: rgba(59, 52, 45, 0.12);
+    --navfoot: rgb(37, 37, 37);
 }
 
 
 html {
-    background-color: var(--color-primary);
+    background-color: var(--navfoot);
 }
 
 

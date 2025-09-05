@@ -167,9 +167,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <?php if (!empty($kamers)): ?>
         <?php $kamer = $kamers[0]; ?>
-        <div class="kamer-container">
+        <section class="kamer-container">
             <h1 class="kamer-naam"><?= $is_new_room ? 'Nieuwe kamer toevoegen' : 'Kamer bewerken' ?></h1>
-            <div class="kamer-content">
+            <main class="kamer-content">
                 <form method="post" enctype="multipart/form-data" class="kamer-info">
                     <label for="kamer-naam-input" class="kamer-label">Naam kamer</label>
                     <input type="text" id="kamer-naam-input" name="naam" class="kamer-input" value="<?= $kamer['naam'] ?>">
@@ -188,10 +188,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     <label for="kamer-afbeelding-upload" class="kamer-label">Voeg nieuwe afbeelding toe</label>
                     <input type="file" id="kamer-afbeelding-upload" name="afbeelding" class="kamer-input" accept="image/*">
-                    <div class="kamer-form-buttons">
+                    <article class="kamer-form-buttons">
                         <button type="submit" class="kamer-save-knop"><?= $is_new_room ? 'Toevoegen' : 'Opslaan' ?></button>
                         <a href="/admin" class="kamer-cancel-knop">Annuleren</a>
-                    </div>
+                    </article>
                 </form>
                 <?php if (!$is_new_room): ?>
                     <?php
@@ -202,15 +202,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $afbeeldingen[] = $afbeelding_row['link'];
                     }
                     ?>
-                    <div class="rechts">
-                        <div class="kamer-afbeeldingen-slideshow">
+                    <main class="rechts">
+                        <article class="kamer-afbeeldingen-slideshow">
                             <?php if (!empty($afbeeldingen)): ?>
                                 <?php if (count($afbeeldingen) > 1): ?>
                                     <button type="button" class="slideshow-arrow left" onclick="plusSlides(-1)">&#10094;</button>
                                 <?php endif; ?>
-                                <div class="slideshow-images">
+                                <article class="slideshow-images">
                                     <?php foreach ($afbeeldingen as $index => $link): ?>
-                                        <div class="slide-container" style="<?= $index === 0 ? '' : 'display:none;' ?>">
+                                        <article class="slide-container" style="<?= $index === 0 ? '' : 'display:none;' ?>">
                                             <img class="kamer-afbeelding slideshow-slide" src="<?= $link ?>"
                                                 alt="Afbeelding van <?= $kamer['naam'] ?>">
                                             <form method="post">
@@ -222,24 +222,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                 ?>">
                                                 <button type="submit" class="kamer-afbeelding-verwijder fa-solid fa-trash"></button>
                                             </form>
-                                        </div>
+                                        </article>
                                     <?php endforeach; ?>
-                                </div>
+                                </article>
                                 <?php if (count($afbeeldingen) > 1): ?>
                                     <button type="button" class="slideshow-arrow right" onclick="plusSlides(1)">&#10095;</button>
                                 <?php endif; ?>
                             <?php else: ?>
                                 <p class="kamer-afbeelding">Geen afbeeldingen beschikbaar.</p>
                             <?php endif; ?>
-                        </div>
-                    </div>
+                        </article>
+                    </main>
                 <?php else: ?>
-                    <div class="rechts">
+                    <main class="rechts">
                         <p class="kamer-afbeelding">Afbeeldingen worden beschikbaar na het opslaan van de kamer.</p>
-                    </div>
+                    </main>
                 <?php endif; ?>
-            </div>
-        </div>
+            </main>
+        </section>
     <?php endif; ?>
 </body>
 

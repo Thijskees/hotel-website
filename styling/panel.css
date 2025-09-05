@@ -19,6 +19,7 @@ aside a {
     display: block;
     transition: all 0.5s;
     border-bottom: 1px solid var(--color-border);
+    border-radius: 5px;
 }
 
 aside a:hover {
@@ -37,6 +38,7 @@ aside a i {
     padding: 8px 12px;
     border-bottom: 1px solid var(--color-border);
     transition: all 0.5s;
+    border-radius: 5px;
 }
 
 .logout:hover {
@@ -190,7 +192,7 @@ article {
 }
 
 .dropdown-content button {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-dark);
     color: var(--color-white);
     border: none;
     padding: 0.5rem 1rem;
@@ -200,7 +202,7 @@ article {
 }
 
 .dropdown-content button:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-bg-dark);
 }
 
 .dropdown-content input {
@@ -213,4 +215,35 @@ article {
 .dropdown-content input:focus {
     border-color: var(--color-primary);
     outline: none;
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    
+    aside {
+        height: auto;
+        width: 100%;
+        position: relative;
+        padding: 10px;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .rooms-container {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .room-card {
+        width: 100%;
+        margin: 20px 0 20px 0;
+    }
+
+    .room-info {
+        padding: 15px;
+    }
 }

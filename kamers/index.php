@@ -30,8 +30,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <body>
     <?php include('../assets/html/navbar.html'); ?>
-    <div class="hero-container">
-        <div class="hero-content-wrapper">
+    <section class="hero-container">
+        <main class="hero-content-wrapper">
             <h1>Ontdek Onze Kamers</h1>
              <!--tesk opmaak verbeteren-->
             <p>Welkom in het 3-duimen Hotel De Zonne Vallei, waar luxe en comfort hand in hand gaan. Gelegen in het hart van Alkmaar, bieden onze kamers een perfecte balans tussen modern design en gezelligheid. Of u nu voor een romantisch uitje, een familievakantie of een zakelijke bijeenkomst komt, ons hotel heeft precies wat u nodig heeft voor een onvergetelijk verblijf. Geniet van de rust en elegantie van onze kamers en ervaar de uitzonderlijke gastvrijheid die ons hotel kenmerkt.</p>
@@ -53,8 +53,8 @@ Speciaal ontworpen voor gezinnen, biedt onze Familie Suite voldoende ruimte en c
 5. Bruidssuite
 Onze Bruidssuite is de ultieme romantische ontsnapping voor pasgetrouwde stellen. Deze luxueuze suite biedt een ruime slaapkamer met een kingsize bed, een stijlvolle woonkamer en een eigen balkon met een prachtig uitzicht op Alkmaar. Geniet van extra's zoals een bubbelbad, rozenblaadjes op het bed en een fles champagne om uw speciale gelegenheid te vieren in stijl.
 -->
-        </div>
-    </div>
+</main>
+    </section>
     <main class="rooms-list">
         <section class="rooms-container">
             <?php
@@ -73,10 +73,10 @@ Onze Bruidssuite is de ultieme romantische ontsnapping voor pasgetrouwde stellen
                     <?php if ($kamerAfbeelding): ?>
                         <img src="<?= $kamerAfbeelding ?>" alt="<?= $kamer['naam'] ?>">
                     <?php endif; ?>
-                    <div class="room-info">
+                    <article class="room-info">
                         <h2><?= $kamer['naam'] ?></h2>
                         <span class="room-price">€<?= $kamer['prijs'] ?> / nacht</span>
-                    </div>
+                    </article>
                 </a>
                 <?php
             }

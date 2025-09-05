@@ -12,20 +12,20 @@
 <body>
     <?php include("assets/html/navbar.html"); ?>
 
-    <div class="hero-container">
-        <div class="hero-content-wrapper">
+    <section class="hero-container">
+        <main class="hero-content-wrapper">
             <h1>Welkom bij Hotel De Zonne Vallei</h1>
 
 
-            <div class="hero-button-container">
+            <article class="hero-button-container">
                 <a href="/kamers">Ontdek Onze Kamers</a>
                 <a href="/contact" id="h-btn-2">Contact</a>
-            </div>
-        </div>
-    </div>
+            </article>
+        </main>
+    </section>
 
     <section class="about-section3">
-        <div class="about-content-wrapper3">
+        <main class="about-content-wrapper3">
             <h2>Over Ons</h2>
             <p>
                 Hotel De Zonne Vallei is opgericht door Bouke van Zon, een visionaire ondernemer met een passie voor
@@ -37,13 +37,13 @@
                 Lees hier verder:
             </p>
             <a href="/over-ons" class="about-button">Meer over ons</a>
-        </div>
+        </main>
     </section>
 
     <section class="about-section">
-        <div class="about-content-wrapper">
+        <main class="about-content-wrapper">
 
-            <div class="about-paragraph">
+            <article class="about-paragraph">
                 <h2>Informatie</h2>
                 <p>
                     Ontsnap aan de dagelijkse drukte en ontdek de rust en luxe van Hotel De Zonne Vallei, een 3-duimen
@@ -51,29 +51,27 @@
                     adembenemende natuur. Of u nu voor een romantisch uitje, een familievakantie of een zakelijke
                     bijeenkomst komt, ons hotel heeft precies wat u nodig heeft voor een onvergetelijk verblijf.
                 </p>
-            </div>
-        </div>
+            </article>
+        </main>
     </section>
 
     <section class="about-section2">
-        <div class="about-content-wrapper2">
-            <div class="about-paragraph2">
+        <main class="about-content-wrapper2">
+            <article class="about-paragraph2">
                 <h2>Ontdek Onze Kamers</h2>
                 <p>
                     Onze stijlvolle en goed uitgeruste kamers bieden alles wat u nodig heeft voor een onvergetelijk
                     verblijf. Geniet van moderne voorzieningen, comfortabele bedden en een prachtig uitzicht op de
                     omgeving.
                 </p>
-            </div>
+            </article>
             <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/619990272.jpg?k=0cdca0c64117ed139eaeb5198076a2aa715ec9e6ab121fd687d438d93d832399&o=&hp=1"
                 alt="Voorbeeld kamer">
-        </div>
+        </main>
     </section>
 
     <section class="about-section">
         <div class="about-content-wrapper">
-            <img src="https://fastly.picsum.photos/id/42/3456/2304.jpg?hmac=dhQvd1Qp19zg26MEwYMnfz34eLnGv8meGk_lFNAJR3g"
-                alt="Voorbeeld kamer">
             <div class="about-paragraph">
                 <h2>Culinaire Verwennerij</h2>
                 <p>
@@ -82,12 +80,14 @@
                     is een ervaring op zich. Ontdek ons menu en geniet van de smaken van Alkmaar.
                 </p>
             </div>
+            <img src="https://fastly.picsum.photos/id/42/3456/2304.jpg?hmac=dhQvd1Qp19zg26MEwYMnfz34eLnGv8meGk_lFNAJR3g"
+                alt="Voorbeeld kamer">
         </div>
     </section>
 
     <section class="about-section2">
-        <div class="about-content-wrapper2">
-            <div class="about-paragraph2">
+        <main class="about-content-wrapper2">
+            <article class="about-paragraph2">
                 <h2>Ontdek de Omgeving</h2>
                 <p>
                     Hotel De Zonne Vallei ligt in het bruisende hart van Alkmaar, een stad die rijk is aan geschiedenis
@@ -96,10 +96,10 @@
                     vele terrassen of een ontspannen wandeling maakt langs de grachten, Alkmaar biedt voor ieder wat
                     wils. Ontdek de schoonheid en charme van deze historische stad tijdens uw verblijf in ons hotel.
                 </p>
-            </div>
+            </article>
             <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_720,h_480/https://nederlandontdekker.nl/wp-content/uploads/2023/07/alkmaar-wat-te-doen.png"
                 alt="Voorbeeld kamer">
-        </div>
+        </main>
     </section>
 
     <?php include("assets/html/footer.html"); ?>
